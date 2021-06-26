@@ -1,6 +1,7 @@
 HOUSE PRICE PREDICTION
 
 Housing price trends are not only the concern of buyers and sellers, but it also indicates the current economic situation. There are many factors which has impact on house prices, such as numbers of bedrooms and bathrooms. Even the nearby location, a location with a great accessibility to highways, expressways, schools, shopping malls and local employment opportunities contributes to the rise in house price. Manual house predication becomes difficult, hence there are many systems developed for house price prediction. House prices increase every year, so there is a need for a system to predict house prices in the future. 
+
 In the house growth forecasting, will try to find optimal solutions to predict the movement of housing market using historical growth rates or house price indices.
 
 Problems faced during buying a house: 
@@ -22,13 +23,13 @@ Algorithms used: Linear Regression and Forest Regression.
 
 Advantages:
 
-• Saves time.
-• Easy to access the system from anywhere and anytime.
+Saves time and 
+Easy to access the system from anywhere and anytime.
 
 Pre-requisites:
 
-VS code
-Jupyter Notebbok
-Django
+VS code,
+Jupyter Notebbok,
+Django and
 SQLite studio
 
