@@ -1,0 +1,96 @@
+{% load static %}
+<html>
+<head>
+<title> ESTATE PRICE/LOGIN </title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+  <style type="text/css">
+  
+  body{
+         background:url({% static 'images/villa1.jpg' %})50%50%; border: 1px solid black;
+         padding:3px;
+         background-repeat:no-repeat;
+         background-size: cover;
+     }
+   
+   form{
+   
+    position:fixed;
+    left:35%;
+    top:30px;
+    width:250px;
+    
+      }
+      
+       div {
+  width: 300px;
+  border: 15px black;
+  padding: 30px;
+  margin: 20px;
+  color: black;
+  
+  text-align:left;
+  font-family:"Comic Sans MS", cursive, sans-serif;
+  font-weight:bold;
+  
+  
+}
+
+.mydiv {
+  border: 5px;
+  background-color:#e8ecec50;
+  text-align: center;
+  font-family:"Times New Roman", Times, serif;
+  font-size:15px;
+  color:black;
+  font-weight:bolder;
+}
+   
+      
+   </style>
+   </head>
+
+<body>
+
+<div> 
+<p> “A man travels the world over in search of what he needs, and returns home to find it.”<br><br>– George Moore</p>
+</div>
+
+<form method="post">
+
+{% csrf_token %}
+
+ <br>
+ <br>
+ 
+ <div class="mydiv">
+ 
+  <p style="font-size:25px;  color:black"> Welcome User </p>
+ <label for="username"> <b> Username: </b> </label><br>
+ <input type="text"class="form-control" id="username" name="username">
+ <br>
+ 
+ <label for="pwd"> <b>Password: </b></label><br>
+ <input type="password"class="form-control" id="pwd" name="pwd">
+ <br>
+ {% for message in messages %}
+<p style="color:#8B0000; background-color:rgba(255, 255, 255, 0.747);"> {{message}} </p>
+{% endfor %}
+
+ <input type="submit"class="form-control btn btn-success" value="LOGIN">
+ <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+    <br>
+     
+    <span class="psw"> <a href="/resetpassword">Forgot password?</a></span>
+  </div>
+</form>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+</body>
+</html>

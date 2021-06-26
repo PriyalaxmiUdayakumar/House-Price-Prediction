@@ -1,0 +1,71 @@
+{% load static %}
+<html>
+<body>
+<title> RESULT </title>
+
+<style type="text/css">
+  
+  body{
+         background:url({% static 'images/villa1.jpg' %})50%50%;
+         padding:3px;
+         background-repeat:no-repeat;
+         background-size: cover;
+     
+     }
+     
+  .result{
+             
+             color:black;
+             background-color:#e8ecec50;
+             margin-left:500px;
+             font-size:12px;
+             font-weight: bolder;
+             width:350px;
+             height:650px;
+             padding:20px;
+             onclick="this.parentElement.style.display='none';"
+         }
+  .buttonalign{
+    text-align:right;
+    border-width:2px;
+    
+
+  }
+         
+  
+</style>
+
+<body>
+  
+      <div class="buttonalign">
+<button  style="float:right;width:100px;height:40px;border:2px solid black; padding:8px;"<a href="logout.html">LOG OUT</a></button>
+</div>
+<div class="result">
+<p style="text-align:center; font-size:20px; color:black;"> <b> Prediction Report </b> </p> <br>
+<h2>BEDROOM :        {{bed}}        </h2> 
+<h2>BATHROOM :       {{bathroom}}   </h2> 
+<h2>SQFT-LIVING :    {{sliving}}    </h2> 
+<h2>SQFT-ABOVE :     {{sabove}}     </h2> 
+<h2>YEAR-BUILT :     {{ybuilt}}     </h2> 
+<h2>YEAR-RENOVATED : {{yrenovated}} </h2> 
+<h2>VIEW :           {{view}}       </h2> 
+<h2>FLOORS :         {{floors}}      </h2> 
+<h2>LAT-AREA :       {{lat}}         </h2> 
+<h2>LONG-AREA :      {{long}}        </h2> 
+<h2>WATERFRONT :     {{waterfront}}  </h2> 
+<h2>GRADE :          {{grade}}       </h2> 
+<br>
+
+<h1 style="text-align:center;">Predicted Price:     Rs {{x}}           </h1> 
+</div>
+
+
+
+
+
+</body>
+</html>
+
+
+
+

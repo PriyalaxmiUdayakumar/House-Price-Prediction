@@ -1,0 +1,12 @@
+{% load static %}
+<html>
+<body>
+<title> PROPERTIES </title>
+{% for i in p %}
+   <h2> LOCATION:<br><h3>{{i.location}} </h3></h2> 
+   <h2> PROPERTY: </h2> <br>
+   <img src="{{i.img.url}}"><br>
+   <h2> PRICE: {{i.price}} INR </h2> 
+{% endfor %}
+</body>
+</html>

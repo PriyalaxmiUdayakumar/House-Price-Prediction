@@ -1,0 +1,140 @@
+{% load static %}
+<html>
+
+<head>
+<title>ESTATE PRICE/ PREDICTION </title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+  <style type="text/css">
+  
+  body{
+         background:url({% static 'images/villa1.jpg' %})50%50%; border: 1px solid black;
+         padding:3px;
+         background-repeat:no-repeat;
+         background-size: cover;
+     }
+  .mydiv{
+  
+  margin-left:400px; 
+  margin-right:400px;     
+  background-color:#e8ecec50;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size:15px;
+  padding-left:40px;
+  padding-right:40px;
+  padding-top:15px;
+  color:black;
+  
+  }
+      
+    
+  
+
+      
+   </style>
+   </head>
+
+<body>
+
+
+<div >   </div>
+
+<form method="post" action="result">
+{% csrf_token %}
+
+
+<div class= "mydiv" >
+<img src="/static/images/logo12.png" alt="Logo alt">
+<br>
+<br>
+<p style="font-size:20px;background-color:#3C3A5A;color:black"> || PREDICT PRICE ||  </p>
+<br>
+<div class="row">
+  <div class="col">
+  <label for="bedroom"  >Bedrooms Required:</label><br>
+ <input type="text" class="form-control" id="bedroom" name="bedroom" required>
+ 
+  </div>
+  <div class="col">
+  <label for="bathroom"  >Bathrooms Required:</label><br>
+ <input type="text" class="form-control" id="bathroom" name="bathroom" required>
+ 
+  </div>
+  
+  <div class="w-100"></div>
+  <div class="col">
+  <label for="sqft_living" >Sqft_Living:</label><br>
+ <input type="text" class="form-control" id="sqft_living" name="sqft_living" required>
+  </div>
+  <div class="col">
+
+ <label for="sqft_above"  >Sqft_Above:</label><br>
+ <input type="text" class="form-control" id="sqft_above" name="sqft_above" required>
+ 
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+   <label for="yr-built"  >Year-Built:</label><br>
+<input type="text" class="form-control" id="yr_built" name="yr_built" required>
+
+  </div>
+  
+  <div class="col">
+  
+ <label for="yr_renovated"  >Year_Renovated:</label><br>
+ <input type="text" class="form-control" id="yr_renovated" name="yr_renovated" required>
+ 
+ 
+  </div>
+  
+  <div class="w-100"></div>
+  <div class="col">
+  
+ <label for="view"  >View:</label><br>
+ <input type="text" class="form-control" id="view" name="view" required>
+  </div>
+  <div class="col">
+  <label for="floors"  >Floors:</label><br>
+ <input type="text" class="form-control" id="floors" name="floors" required>
+ 
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+  <label for="lat" >Lat Area:</label><br>
+ <input type="text" class="form-control" id="lat" name="lat" required>
+ 
+  </div>
+  <div class="col">
+  <label for="long" >Long Area:</label><br>
+ <input type="text" class="form-control" id="long" name="long" required>
+ 
+  </div>
+  
+  <div class="w-100"></div>
+  <div class="col">
+  <label for="waterfront" >Waterfront:</label><br>
+ <input type="text" class="form-control" id="waterfront" name="waterfront" required>
+ 
+  </div>
+  <div class="col">
+  <label for="grade"  >Grade:</label><br>
+ <input type="text" class="form-control" id="grade" name="grade" required>
+ 
+  </div>
+</div>
+<br>
+<br>
+<input type="submit" class="form-control btn btn-success" value="Predict">
+</div>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+</body>
+</html>

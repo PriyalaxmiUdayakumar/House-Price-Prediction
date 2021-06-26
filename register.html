@@ -1,0 +1,107 @@
+{% load static %}
+<html>
+
+<head>
+<title>HOUSE PRICE/REGISTRATION </title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+  <style type="text/css">
+  
+  body{
+         background:url({% static 'images/villa1.jpg' %})50%50%; border: 1px solid black;
+         padding:3px;
+         background-repeat:no-repeat;
+         background-size: cover;
+     }
+   
+   form{
+   
+    position:fixed;
+    left:35%;
+    top:20px;
+    width:250px;
+
+   
+      }
+      
+      div{
+  width: 320px;
+  height:590px;
+  border: 15px black;
+  padding: 30px;
+  margin: 20px;
+  color: black;
+  
+  text-align:left;
+  font-family:"Comic Sans MS", cursive, sans-serif;
+  
+}
+
+.mydiv {
+  border: 4px;
+  background-color:#e8ecec50;
+  text-align: center;
+  color:black;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size:15px;
+
+   }
+      #message{
+                  color:red;
+      }
+   </style>
+   </head>
+
+<body>
+
+<div> 
+<p> <b> “I’ve learned that home isn’t a place, it’s a feeling.” </b> <br>
+<br> <b> – Cecelia Ahearn </b></p>
+</div>
+
+<form method="post" >
+
+{% csrf_token %}
+
+
+ <div class="mydiv">
+ 
+  <p style="font-size:20px; color: black"> REGISTER WITH US </p>
+ <label for="name">Name:</label><br>
+ <input type="text" class="form-control" id="name" name="name" required>
+
+ <label for="username">Username:</label><br>
+ <input type="text"class="form-control" id="username" name="username" required>
+ 
+ <label for="email">Email Id:</label><br>
+ <input type="email" class="form-control" id="email" name="email" required>
+ 
+ <label for="phone">Contact No:</label><br>
+ <input type="tel" class="form-control" id="phone" name="phone" required>
+
+ <label for="pwd">Create Password:</label><br>
+ <input type="password" class="form-control" id="pwd" name="pwd" required>
+ 
+ <label for="pwd1">Confirm Password:</label><br>
+ <input type="password" class="form-control" id="pwd1" name="pwd1" required>
+ 
+ <br>
+ 
+ {% for message in messages %}
+<p style="color:black; background-color: white(255, 255, 255);"> {{message}} ! </p>
+{% endfor %}
+ 
+<input type="submit" class="form-control btn btn-success" value="REGISTER">
+<br>
+
+<p> Already an user<br> <a href ="/login"> <b> LOGIN!! </b></a> </p>
+</div>
+</form>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+</body>
+</html>
